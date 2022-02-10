@@ -8,14 +8,14 @@ end
 def is_degree_valid?(degree)
     degree >= -273.15
 end
-def if_numeric?(degree)
+def is_numeric?(degree)
     Float(degree) != nil rescue false
 end
 
 begin
     puts "Введите температуру по Цельсию"
     degree = gets.chomp
-    if !if_numeric?(degree)
+    if !is_numeric?(degree)
         raise NotNumericExeption
     end
     degree = degree.to_f
